@@ -10,7 +10,13 @@ get '/secret' do
   "This is the secret message again and again"
 end
 
-get '/cat' do
-  @sample_name = ["Amigo", "Oscar", "Viking"].sample
+get '/random-cat' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index) # erb stands for Embedded Ruby
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
+  erb(:index)
 end
