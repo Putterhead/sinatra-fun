@@ -10,5 +10,5 @@ get '/secret' do
 end
 
 get '/cat' do
-  erb(:index)
+  erb(:index) # erb stands for Embedded Ruby
 end
